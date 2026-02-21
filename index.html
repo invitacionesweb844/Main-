@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvitacionesWeb 2026 — Invitaciones Digitales Elegantes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND ORBS -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Invitaciones<span class="logo-accent">Web</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-funciona">Cómo Funciona</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn-nav">Crear mi Invitación</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#servicios">Servicios</a>
+      <a href="#como-funciona">Cómo Funciona</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn-mobile">Crear mi Invitación</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-label fade-in-up delay-1">✦ Invitaciones Digitales Premium</p>
+      <h1 class="hero-title fade-in-up delay-2">
+        Tu evento merece<br /><em>una invitación</em><br />inolvidable
+      </h1>
+      <p class="hero-subtitle fade-in-up delay-3">
+        Diseños elegantes, personalizados y modernos para bodas, XV años, cumpleaños y más. Accesibles desde cualquier dispositivo.
+      </p>
+      <div class="hero-ctas fade-in-up delay-4">
+        <a href="#contacto" class="btn-primary">Solicitar Ahora</a>
+        <a href="#servicios" class="btn-ghost">Ver Planes</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <p class="section-label fade-in-up">Nuestros Planes</p>
+      <h2 class="section-title fade-in-up">Elige el que más<br /><em>te inspire</em></h2>
+      <div class="cards-grid">
+
+        <!-- Plan Básico -->
+        <div class="service-card fade-in-up" data-plan="basico">
+          <div class="card-badge">Básico</div>
+          <div class="card-icon">🎨</div>
+          <h3 class="card-title">Invitación Elegante</h3>
+          <p class="card-desc">Diseño bonito, limpio y personalizado con tus datos del evento. Ideal para compartir por WhatsApp y redes sociales.</p>
+          <ul class="card-features">
+            <li><i class="fa-solid fa-check"></i> Nombre, fecha y lugar del evento</li>
+            <li><i class="fa-solid fa-check"></i> Diseño elegante personalizado</li>
+            <li><i class="fa-solid fa-check"></i> Paleta de colores a tu gusto</li>
+            <li><i class="fa-solid fa-check"></i> Link compartible</li>
+            <li><i class="fa-solid fa-xmark dim"></i> Música de fondo</li>
+            <li><i class="fa-solid fa-xmark dim"></i> Animaciones avanzadas</li>
+          </ul>
+          <div class="card-price">
+            <span class="price-amount">$200</span>
+            <span class="price-currency">MXN</span>
+          </div>
+          <a href="#contacto" class="btn-card" data-plan-select="basico">Elegir Plan</a>
+        </div>
+
+        <!-- Plan Premium -->
+        <div class="service-card featured fade-in-up" data-plan="premium">
+          <div class="card-badge featured-badge">✦ Premium</div>
+          <div class="featured-glow"></div>
+          <div class="card-icon">💎</div>
+          <h3 class="card-title">Página Súper Personalizada</h3>
+          <p class="card-desc">Una experiencia completa a tu medida. Animaciones, música, efectos únicos y diseño completamente personalizado.</p>
+          <ul class="card-features">
+            <li><i class="fa-solid fa-check"></i> Todo lo del plan básico</li>
+            <li><i class="fa-solid fa-check"></i> Música de fondo personalizada</li>
+            <li><i class="fa-solid fa-check"></i> Animaciones y efectos dinámicos</li>
+            <li><i class="fa-solid fa-check"></i> Temática única a tu gusto</li>
+            <li><i class="fa-solid fa-check"></i> Galería de fotos</li>
+            <li><i class="fa-solid fa-check"></i> Confirmación de asistencia (RSVP)</li>
+          </ul>
+          <div class="card-price">
+            <span class="price-amount">$300</span>
+            <span class="price-currency">MXN</span>
+          </div>
+          <a href="#contacto" class="btn-card featured-btn" data-plan-select="premium">Elegir Plan</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="como-funciona">
+    <div class="container">
+      <p class="section-label fade-in-up">Proceso Simple</p>
+      <h2 class="section-title fade-in-up">Listo en <em>3 pasos</em></h2>
+      <div class="steps-grid">
+        <div class="step-card fade-in-up delay-1">
+          <div class="step-number">01</div>
+          <h3>Cuéntanos tu evento</h3>
+          <p>Llena el formulario con los detalles de tu evento y elige el plan que mejor se adapte a tus necesidades.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card fade-in-up delay-2">
+          <div class="step-number">02</div>
+          <h3>Diseñamos juntos</h3>
+          <p>Nuestro equipo crea tu invitación personalizada con los colores, texto y estilo que elegiste.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card fade-in-up delay-3">
+          <div class="step-number">03</div>
+          <h3>Comparte y celebra</h3>
+          <p>Recibe el link de tu invitación y compártelo con todos tus invitados por WhatsApp, Instagram o donde quieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FORM -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <p class="section-label fade-in-up">¡Empieza Hoy!</p>
+      <h2 class="section-title fade-in-up">Solicita tu<br /><em>Invitación</em></h2>
+
+      <div class="form-wrapper fade-in-up">
+        <form id="contactForm" action="https://formspree.io/f/xojnngbp" method="POST" novalidate>
+
+          <!-- Plan selector -->
+          <div class="form-group">
+            <label class="form-label">Selecciona tu Plan <span class="required">*</span></label>
+            <div class="plan-toggle" id="planToggle">
+              <button type="button" class="plan-btn active" data-plan="basico">
+                <span class="plan-btn-icon">🎨</span>
+                <span class="plan-btn-name">Básico</span>
+                <span class="plan-btn-price">$200 MXN</span>
+              </button>
+              <button type="button" class="plan-btn" data-plan="premium">
+                <span class="plan-btn-icon">💎</span>
+                <span class="plan-btn-name">Premium</span>
+                <span class="plan-btn-price">$300 MXN</span>
+              </button>
+            </div>
+            <input type="hidden" name="plan" id="planInput" value="Básico - $200 MXN" />
+          </div>
+
+          <!-- Precio visible -->
+          <div class="price-display" id="priceDisplay">
+            <span class="price-label">Precio del plan:</span>
+            <span class="price-value" id="priceValue">$200 MXN</span>
+          </div>
+
+          <!-- Datos personales -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="nombre">Tu Nombre <span class="required">*</span></label>
+              <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej: Ana García" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="whatsapp">WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp" class="form-input" placeholder="Ej: 618 123 4567" required />
+            </div>
+          </div>
+
+          <!-- Tipo de evento -->
+          <div class="form-group">
+            <label class="form-label" for="tipoEvento">Tipo de Evento <span class="required">*</span></label>
+            <select id="tipoEvento" name="tipo_evento" class="form-input form-select" required>
+              <option value="" disabled selected>Selecciona tu tipo de evento</option>
+              <option value="Boda">💍 Boda</option>
+              <option value="XV Años">👑 XV Años</option>
+              <option value="Cumpleaños">🎂 Cumpleaños</option>
+              <option value="Bautizo">🕊️ Bautizo</option>
+              <option value="Primera Comunión">✝️ Primera Comunión</option>
+              <option value="Baby Shower">🍼 Baby Shower</option>
+              <option value="Graduación">🎓 Graduación</option>
+              <option value="Otro">✨ Otro</option>
+            </select>
+          </div>
+
+          <!-- Datos del evento -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fechaEvento">Fecha del Evento <span class="required">*</span></label>
+              <input type="date" id="fechaEvento" name="fecha_evento" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lugarEvento">Lugar del Evento</label>
+              <input type="text" id="lugarEvento" name="lugar_evento" class="form-input" placeholder="Ej: Salón Las Palmas, CDMX" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nombresInvitacion">Nombre(s) para la Invitación <span class="required">*</span></label>
+            <input type="text" id="nombresInvitacion" name="nombres_invitacion" class="form-input" placeholder="Ej: Sofía & Mateo / Ana Lucía González" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="colores">Colores o Estilo Preferido</label>
+            <input type="text" id="colores" name="colores_estilo" class="form-input" placeholder="Ej: Rosa y dorado, minimalista, estilo jardín..." />
+          </div>
+
+          <!-- Sección extra para Premium -->
+          <div class="premium-extras" id="premiumExtras" style="display:none;">
+            <div class="premium-extras-title">
+              <span class="extras-icon">💎</span> Opciones Exclusivas — Plan Premium
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="musicaGenero">Género Musical de Fondo <span class="required">*</span></label>
+              <select id="musicaGenero" name="musica_genero" class="form-input form-select">
+                <option value="" disabled selected>Selecciona un género</option>
+                <option value="Romántico / Baladas">💕 Romántico / Baladas</option>
+                <option value="Pop en Español">🎵 Pop en Español</option>
+                <option value="Pop Internacional">🌎 Pop Internacional</option>
+                <option value="Instrumental / Piano">🎹 Instrumental / Piano</option>
+                <option value="Clásica / Orquestal">🎻 Clásica / Orquestal</option>
+                <option value="Reggaeton / Urbano">🔥 Reggaeton / Urbano</option>
+                <option value="Cumbia / Regional">🎺 Cumbia / Regional Mexicano</option>
+                <option value="Jazz / Lo-fi">☕ Jazz / Lo-fi</option>
+                <option value="Canción específica">🎤 Tengo una canción específica</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="specificSongGroup" style="display:none;">
+              <label class="form-label" for="cancionEspecifica">Canción o Link (YouTube/Spotify)</label>
+              <input type="text" id="cancionEspecifica" name="cancion_especifica" class="form-input" placeholder="Ej: Perfect - Ed Sheeran / youtube.com/..." />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="animaciones">Estilo de Animaciones</label>
+              <select id="animaciones" name="estilo_animaciones" class="form-input form-select">
+                <option value="" disabled selected>Elige el estilo de animaciones</option>
+                <option value="Elegante y suave">✨ Elegante y suave</option>
+                <option value="Dinámico y llamativo">⚡ Dinámico y llamativo</option>
+                <option value="Minimalista">🤍 Minimalista</option>
+                <option value="Festivo y colorido">🎉 Festivo y colorido</option>
+                <option value="Romántico">🌹 Romántico</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="elementosExtra">Elementos Adicionales</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="extras[]" value="Galería de fotos" /> <span>📷 Galería de fotos</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="extras[]" value="Cuenta regresiva" /> <span>⏳ Cuenta regresiva</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="extras[]" value="Formulario RSVP" /> <span>✅ Confirmación de asistencia (RSVP)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="extras[]" value="Mapa interactivo" /> <span>📍 Mapa interactivo</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="extras[]" value="Dress code" /> <span>👗 Código de vestimenta</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="extras[]" value="Mesa de regalos" /> <span>🎁 Mesa de regalos</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mensaje adicional -->
+          <div class="form-group">
+            <label class="form-label" for="mensaje">Cuéntanos más sobre tu evento</label>
+            <textarea id="mensaje" name="mensaje" class="form-input form-textarea" rows="4" placeholder="Cualquier detalle especial, tema, inspiración o pregunta..."></textarea>
+          </div>
+
+          <!-- Hidden field con precio -->
+          <input type="hidden" name="precio_plan" id="precioHidden" value="$200 MXN" />
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-submit-text">Enviar Solicitud</span>
+            <span class="btn-submit-icon">✦</span>
+          </button>
+
+          <p class="form-note">Te contactaremos por WhatsApp en menos de 24 horas 💬</p>
+
+        </form>
+
+        <!-- Success message -->
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="success-icon">✦</div>
+          <h3>¡Solicitud Enviada!</h3>
+          <p>Gracias por contactarnos. Te escribiremos por WhatsApp muy pronto para comenzar a diseñar tu invitación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL / FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Invitaciones<span class="logo-accent">Web</span> 2026</span>
+      </div>
+      <p class="footer-tagline">Hacemos que cada celebración sea inolvidable.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/invitacionesweb2026?igsh=MXNkbTR0enR3Y3IwOQ==" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+          <span>@invitacionesweb2026</span>
+        </a>
+        <a href="https://www.facebook.com/share/17cD2Smb2a/" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>InvitacionesWeb</span>
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 InvitacionesWeb. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
