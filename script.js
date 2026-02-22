@@ -199,7 +199,101 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// ---- Active section highlighting in nav ----
+// ---- Carousel ----
+(function() {
+  const track   = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const dotsContainer = document.getElementById('carouselDots');
+
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+  let current = 0;
+  let autoTimer = null;
+
+  // How many slides visible at once
+  function visibleCount() {
+    if (window.innerWidth <= 560) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, slides.length - visibleCount());
+  }
+
+  // Build dots
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const total = maxIndex() + 1;
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === current ? ' active' : '');
+      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function getSlideWidth() {
+    if (!slides[0]) return 0;
+    const slideEl = slides[0];
+    return slideEl.offsetWidth + 20; // 20 = gap
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, maxIndex()));
+    track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= maxIndex();
+    updateDots();
+  }
+
+  prevBtn.addEventListener('click', () => { resetAuto(); goTo(current - 1); });
+  nextBtn.addEventListener('click', () => { resetAuto(); goTo(current + 1); });
+
+  // Auto-advance
+  function startAuto() {
+    autoTimer = setInterval(() => {
+      goTo(current >= maxIndex() ? 0 : current + 1);
+    }, 3800);
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    startAuto();
+  }
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      resetAuto();
+      goTo(diff > 0 ? current + 1 : current - 1);
+    }
+  });
+
+  // Init
+  buildDots();
+  goTo(0);
+  startAuto();
+
+  window.addEventListener('resize', () => {
+    buildDots();
+    goTo(Math.min(current, maxIndex()));
+  });
+})();
+
+
 const sections = document.querySelectorAll('section[id]');
 const navLinksAll = document.querySelectorAll('.nav-links a');
 
