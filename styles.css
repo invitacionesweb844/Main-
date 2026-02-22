@@ -263,20 +263,23 @@ body {
 
 /* ---- HERO ---- */
 .hero {
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 120px 32px 80px;
+  text-align: center;
+  padding: 140px 32px 60px;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 60px;
+  gap: 0;
   position: relative;
   z-index: 1;
+  flex-wrap: wrap;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 580px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .hero-label {
@@ -307,13 +310,16 @@ body {
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 40px;
-  max-width: 460px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-ctas {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -446,17 +452,7 @@ body {
 .mock-btn:hover { transform: scale(1.04); }
 
 @media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    padding-top: 100px;
-    align-items: flex-start;
-  }
-  .hero-visual {
-    align-self: center;
-    flex: unset;
-    width: 100%;
-    max-width: 340px;
-  }
+  .hero { padding-top: 100px; }
 }
 
 /* ---- SECTIONS COMMON ---- */
@@ -1093,9 +1089,6 @@ section { position: relative; z-index: 1; }
 
 
 /* ---- CAROUSEL ---- */
-.hero {
-  flex-wrap: wrap;
-}
 
 .carousel-wrapper {
   flex: 0 0 100%;
@@ -1284,16 +1277,8 @@ section { position: relative; z-index: 1; }
 }
 
 /* Hero layout fix when carousel is present */
-@media (min-width: 901px) {
-  .hero {
-    flex-direction: row;
-    align-items: center;
-  }
-  .hero-content { flex: 1; }
-  .carousel-wrapper {
-    flex: 0 0 100%;
-    margin-top: 56px;
-  }
+@media (max-width: 900px) {
+  .hero { padding-top: 100px; }
 }
 
 
